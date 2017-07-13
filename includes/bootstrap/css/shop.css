@@ -1,0 +1,209 @@
+#leftnav {
+	width: 150px !important;
+	font-size: 14px !important;
+	vertical-align: top !important;
+	font-size: 85% !important;
+}
+
+ul, ol {
+	font-family: Georgia, "Times New Roman", Times, serif !important;
+}
+.mainContent{
+	padding:50px;
+}
+#leftnav a {
+	/*/*/padding: 3px !important; 
+	display: block !important;
+	border: 1px dotted #CCC !important;
+	text-decoration: none !important;
+	line-height: 1em !important;
+	font-size: 13px !important;
+	width: 150px !important; /* */
+}
+
+#leftnav a:link, #leftnav a:visited {
+	color: #666!important;
+}
+
+#leftnav a:hover, #leftnav a:active {
+	color: #FFFFFF!important;
+	background-color: #6699CC!important;
+	border: 1px solid #000!important;
+}
+
+#leftnav ul {
+	/*/*/padding: 0em !important;
+	margin-left: 0em !important;
+	margin-right: 0em !important;
+	list-style-type: none !important; /* */
+}
+
+#leftnav li {
+	/*/*/margin: 0px 0px 6px 0px !important; /* */	
+}
+
+#current a {
+	color: #FFFFFF !important;
+	/*/*/background-color: #999999 !important;
+	border: 2px dotted #999 !important; /* */
+}
+
+#minicart {
+	font-size: 13px !important;	
+}
+
+.entryTable {
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 12px !important;
+	background-color: #DDDDDD !important;
+}
+
+.entryTableHeader {
+	font-family: "Courier New", Courier, mono !important;
+	font-size: 14px !important;
+	color: #FFFFFF !important;
+	background-color: #7F92A4 !important;
+	font-weight: bold !important;
+	background-position: center !important;
+}
+
+.entryTable .label {
+	background-color: #EFEFEF !important;
+}
+
+.entryTable .content {
+	background-color: #FFFFFF !important;
+}
+
+
+.infoTable {
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 12px !important;
+	background-color: #DDDDDD !important;
+}
+
+.infoTableHeader {
+	font-family: "Courier New", Courier, mono !important;
+	font-size: 14px !important;
+	color: #FFFFFF !important;
+	background-color: #7F92A4 !important;
+	font-weight: bold !important;
+	background-position: center !important;
+}
+
+.infoTable .label {
+	background-color: #EFEFEF !important;
+}
+
+.infoTable .content {
+	background-color: #FFFFFF !important;
+}
+
+.box {
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 12px !important;
+	border: 1px solid #336699 !important;
+}
+
+.notice {
+	color: #996600 !important;
+	font-weight: bold !important;
+}
+
+.addToCartButton {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#333333;
+	font-weight:bold;
+	border: 1px solid #336699;
+	background-color:#FFCC00;
+}
+
+#errorMessage {
+	color: #990000 !important;
+	font-weight: bold !important;
+}
+
+.outOfStock {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#FF0000;
+	font-weight:bold;
+	border: 1px solid #336699;
+	padding: 2px;
+	margin: 2px;
+}
+
+
+
+* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+	.show-detail-product img.img-rounded {
+		width:80%!important;
+	}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+
+}
