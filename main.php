@@ -66,6 +66,10 @@ session_start();
                 <section class="content">
 
                     <div class="row">
+                    <?php
+                        if($_SESSION['IT'] <> "0")
+                        {   
+                    ?>                    
                         <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-blue">
@@ -85,7 +89,11 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
-                        
+                    <?php
+                        }
+                        if($_SESSION['RISK'] <> "0")
+                        {   
+                    ?>                                           
                         <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-yellow">
@@ -106,7 +114,11 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
-
+                    <?php
+                        }
+                        if($_SESSION['NUTRITION'] <> "0")
+                        {   
+                    ?>                    
 	                    <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-maroon">
@@ -127,8 +139,11 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
-                        
-					
+                    <?php
+                        }
+                        if($_SESSION['LA'] <> "0")
+                        {   
+                    ?>                    
 						<div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-green">
@@ -149,7 +164,11 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
-                        
+                    <?php
+                        }
+                        if($_SESSION['PERSON'] <> "0")
+                        {   
+                    ?>                    
                         <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-blue">
@@ -170,7 +189,11 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
-                        
+                    <?php
+                        }
+                        if($_SESSION['ROOM'] <> "0")
+                        {   
+                    ?>                    
                         <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-yellow">
@@ -191,6 +214,11 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
+                    <?php
+                        }
+                        if($_SESSION['REPORT'] <> "0")
+                        {   
+                    ?>                    
 	                    <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-maroon">
@@ -211,7 +239,11 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
-
+                    <?php
+                        }
+                        if($_SESSION['LA'] <> "0")
+                        {   
+                    ?>                    
 	                    <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-green">
@@ -232,7 +264,11 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
-
+                    <?php
+                        }
+                        if($_SESSION['DURABLE'] <> "0")
+                        {   
+                    ?>                    
 	                    <div class="col-lg-3 col-xs-6">
                             <!-- small box -->
                             <div class="small-box bg-green">
@@ -252,6 +288,10 @@ session_start();
                                 </a>
                             </div>
                         </div><!-- ./col -->
+                    <?php
+                        }
+                    ?>                    
+    
                     </div>
                 </section><!-- /.content -->
 				<!-- Main row -->

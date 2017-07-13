@@ -39,14 +39,18 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span>ระบบลา&ความเสี่ยง <i class="caret"></i></span>
+                                <span><?=$objResultNAV['title']?><?=$objResultNAV['name']?>  <?=$objResultNAV['lastname']?> <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
+                                <?php if($objResultNAV['sex'] <> "ชาย"){  ?>
+                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                <?php }else{ ?>
                                     <img src="img/avatar.png" class="img-circle" alt="User Image" />
+                                <?php } ?>
                                     <p>
-										<td><?=$objResult['title']?><?=$objResult['name']?>  <?=$objResult['lastname']?>
+										<td><?=$objResultNAV['title']?><?=$objResultNAV['name']?>  <?=$objResultNAV['lastname']?>
                                         <small>Member since Nov. 2012</small>
                                     </p>
                                 </li>

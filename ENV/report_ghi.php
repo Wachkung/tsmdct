@@ -55,6 +55,7 @@
                                                 <th width="10%">หน่วยงาน</th>
                                                 <th width="13%">ประสบปัญหา</th>
                                                 <th width="5%"><i class="fa fa-edit"></i></th>
+                                                <th width="2%"><i class="fa fa-check"></i></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -94,6 +95,7 @@
                                                 <td><?=$datadepartrespon2['depart']?></td>
                                                 <td><?=LongThaiDate($data['daterigter'])?></td>
                                                <td><a href="risk_detail.php?id=<?=$data['id']?>" title="<?=$data['dataevent']?>"><span class="label label-primary"><i class="fa fa-edit"></i></span></a></td>
+                                                <td ><?if ($data['noteceo'] == "") {echo "  ";}else{echo "<center><span class='label label-primary'><i class='fa fa-check' aria-hidden='true'></i></span></center>";} ?></td>
                                             </tr>
                                         <?php $no++; } ?>
                                         </tbody>
