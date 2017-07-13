@@ -84,6 +84,16 @@
                                            	<input name="namegroup" type="text" class="form-control" >
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
+
+									  <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar-o"> ทีมคุณภาพที่รับผิดชอบ</i>
+                                            </div>
+                                           	<input name="grouptype" type="text" class="form-control" >
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+                                    
 									<div class="form-group">
 										<button name="btnSubmit" type="submit" class="btn btn-primary">บันทึกโปรแกรมความเสี่ยง</button> 
                                     	<button type="button" class="btn btn-success" onclick="window.location.href='index.php'" >กลับหน้าหลัก</button>

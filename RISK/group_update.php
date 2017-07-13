@@ -17,7 +17,8 @@
 $id=$_POST['id'];
 $codegroup=$_POST['codegroup'];
 $namegroup=$_POST['namegroup'];
-$strSQL = "update risk2_group set codegroup='$codegroup', namegroup='$namegroup' where id=$id";
+$grouptype=$_POST['grouptype'];
+$strSQL = "update risk2_group set codegroup='$codegroup', namegroup='$namegroup',grouptype='$grouptype' where id=$id";
 //echo $strSQL;exit;
 $objQuery = mysql_query($strSQL);
 echo"<meta http-equiv='refresh' content='0;URL=group_edit.php?id=$id'>";

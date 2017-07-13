@@ -15,7 +15,8 @@
 //รับค่ามาจากฟอร์ม
 $codegroup=$_POST['codegroup'];
 $namegroup=$_POST['namegroup'];
-$strSQL = "insert into risk2_group set codegroup='$codegroup', namegroup='$namegroup'"; 
+$grouptype=$_POST['grouptype'];
+$strSQL = "insert into risk2_group set codegroup='$codegroup', namegroup='$namegroup',grouptype='$grouptype'"; 
 $objQuery = mysql_query($strSQL);
 echo"<meta http-equiv='refresh' content='0;URL=group_add.php'>";
 mysql_close();

@@ -88,6 +88,15 @@ function CheckNum(){
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
 
+									  <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar-o"> ทีมคุณภาพที่รับผิดชอบ</i>
+                                            </div>
+                                           	<input name="grouptype" type="text" class="form-control" value="<?=$objResult["grouptype"];?>" >
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
 									<div class="form-group">
 									    <input name="id" type="hidden" class="form-control"  value="<?=$id?>">
 										<button name="btnSubmit" type="submit" class="btn btn-primary">บันทึกโปรแกรมความเสี่ยง</button> 
