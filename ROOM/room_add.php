@@ -228,6 +228,7 @@
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
                                 </div><!-- /.box-body -->
+
                                 <div class="box-footer">
                                 	<div class="form-group">
                                    	<button  type="submit" class="btn btn-success"><i class="fa fa-save"></i> บันทึกขอใช้ห้องประชุม</button>

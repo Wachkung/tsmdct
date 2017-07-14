@@ -274,6 +274,7 @@
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
                                 </div><!-- /.box-body -->
+
                                 <div class="box-footer">
                                 	<div class="form-group">
                                     <input name="id" type="hidden" class="form-control"  value="<?=$id?>">
