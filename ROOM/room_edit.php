@@ -269,7 +269,7 @@
 												<input type="radio" name="budget" id="budget" value="2"<?php if ($objResult['budget'] == 2) {echo 'checked';}?> > : เงินสนับสนุน/โครงการของผู้จัด
 											  </label>
 											  <label class="form-control">
-												<input type="radio" name="budget" id="budget" value="3"<?php if ($objResult['budget'] == 3) {echo 'checked';}?> > : ไม่เสียงบประมาณ(ประชุมภายใน รพ. ขอเฉพาะน้ำดื่ม)
+												<input type="radio" name="budget" id="budget" value="3"<?php if ($objResult['budget'] == 3) {echo 'checked';}?> > : ไม่เสียงบประมาณ(ประชุมภายใน รพ.)
 											  </label>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->

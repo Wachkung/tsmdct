@@ -2,7 +2,6 @@
 	session_start();
 	include("../includes/conndb.php"); 
 	include("../includes/config.inc.php"); 
-	include("../includes/connhidb.php"); 
 	
 	$DEPART1=$_SESSION["DEPART"];
 	if($_SESSION['REPORT'] <> "1")
@@ -90,6 +89,7 @@ $(document).ready(function(){
 											</thead>
 											<tbody>
 											<?php
+												include("../includes/connhidb.php"); 
 												$total=0; $no=1;
 												$sql="SELECT   aa.dct,aa.name,SUM(aa.10),SUM(aa.11),SUM(aa.12),SUM(aa.01),SUM(aa.02),SUM(aa.03),SUM(aa.04),SUM(aa.05),SUM(aa.06),SUM(aa.07),SUM(aa.08),SUM(aa.09),SUM(aa.vn) as Sum ,SUM(aa.hn) as hn
 												from (

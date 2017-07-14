@@ -223,7 +223,7 @@
 												<input type="radio" name="budget" id="budget" value="2" > : เงินสนับสนุน/โครงการของผู้จัด
 											  </label>
 											  <label class="form-control">
-												<input type="radio" name="budget" id="budget" value="3" > : ไม่เสียงบประมาณ(ประชุมภายใน รพ. ขอเฉพาะน้ำดื่ม)
+												<input type="radio" name="budget" id="budget" value="3" > : ไม่เสียงบประมาณ(ประชุมภายใน รพ.)
 											  </label>
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
