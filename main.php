@@ -153,7 +153,7 @@ session_start();
               						ระบบลา&ความเสี่ยง
                                     </h4>
                                     <p>
-              						บุคลากรโรงพยาบาลตาลสุม
+              						บุคลากร<?php echo $namehosp; ?>
                                     </p>
                                 </div>
                                 <div class="icon">
@@ -352,7 +352,7 @@ session_start();
                                     <div class="box box-solid box-primary">
                                                <div class="box-header">
                                                    <i class="fa fa-calendar"></i></i>
-                                                   <h3 class="box-title">ปฏิทิน รายการประชุม ณ. โรงพยาบาลตาลสุม</h3>
+                                                   <h3 class="box-title">ปฏิทิน รายการประชุม ณ. <?php echo $namehosp; ?></h3>
                                                 </div><!-- /.box-header -->
                                                 <div class="box-body">
                                                     <div id="calendar"></div> 

@@ -1,12 +1,12 @@
 <?php
 	session_start();
-	include("includes/conndb.php"); 
-	include("./includes/config.inc.php"); 
-	real_esc($_POST); 
+	include("includes/conndb.php");
+	include("./includes/config.inc.php");
+	real_esc($_POST);
 
 	$_SESSION["YYYY"] =$YYYY;
-	
-	$strSQL = "SELECT * FROM user_datacenter WHERE IDCARD = '".mysql_real_escape_string($_POST['Datacenter_Username'])."' 
+
+	$strSQL = "SELECT * FROM user_datacenter WHERE IDCARD = '".mysql_real_escape_string($_POST['Datacenter_Username'])."'
 	and PASSWORD = '".mysql_real_escape_string(sha1(md5(md5(stripslashes($_POST['Datacenter_Password'])))))."'";
 	$objQuery = mysql_query($strSQL);
 	$objResult = mysql_fetch_array($objQuery);

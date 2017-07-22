@@ -41,9 +41,9 @@
             </ol>
         </section>
         <!-- Main content -->
-        <section class="content">             
-            <div class="row">   
-                <section class="col-lg-6 connectedSortable">    
+        <section class="content">
+            <div class="row">
+                <section class="col-lg-6 connectedSortable">
                     <div class="box box-primary">
                         <div class="box-header">
                             <h3 class="box-title">บันทึกวันลา</h3>
@@ -80,7 +80,7 @@
                                             <option value="ลากิจ">2. ลากิจ</option>
                                             <option value="ลาพักผ่อน">3. ลาพักผ่อน</option>
                                             <option value="ลาคลอด/เลี้ยงดูบุตร">4. ลาคลอด/เลี้ยงดูบุตร</option>
-                                        </select> 
+                                        </select>
 
                                         <div class="input-group-addon">
                                             <i class="fa fa-calendar-o"> จำนวนวันลา</i>
@@ -110,7 +110,7 @@
                                 <div class="form-group">
                                     <input name="idcard" type="hidden" class="form-control"  value="<?= $idcard ?>">
                                     <input name="person" type="hidden" class="form-control"  value="<?= $person ?>">
-                                    <button name="btnSubmit" type="submit" class="btn btn-primary">บันทึกวันลา</button> 
+                                    <button name="btnSubmit" type="submit" class="btn btn-primary">บันทึกวันลา</button>
                                     <button type="button" class="btn btn-success" onclick="window.location.href = 'la_add.php'" >กลับหน้าหลัก</button>
                                 </div><!-- /.form group -->
                             </form>
@@ -167,7 +167,7 @@
                     </div><!-- /.box -->
                 </section><!-- /.Left col -->
 
-                <section class="col-lg-6 connectedSortable">  
+                <section class="col-lg-6 connectedSortable">
                     <div class="box">
                         <div class="box-header">
                             <h3 class="box-title">ประวัติการลา</h3>
@@ -179,7 +179,7 @@
                                         <th width="4%">No.</th>
                                         <th width="30%">วันที่</th>
                                         <th width="5%">ประเภท</th>
-                                        <th width="4%">วัน</th>  
+                                        <th width="4%">วัน</th>
                                         <th width="4%"><i class="fa fa-print"></i></th>
                                     </tr>
                                 </thead>
@@ -257,7 +257,7 @@
 				if (!start || !end) return;
 				var days = (end - start) / 1000 / 60 / 60 / 24;
 				$('#num_nights').val(days+1);
-			});       
+			});
 		}
 
 </script>

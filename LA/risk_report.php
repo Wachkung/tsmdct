@@ -1,12 +1,12 @@
 <?php
 	session_start();
-	include("../includes/conndb.php"); 
-	include("../includes/config.inc.php"); 
-	
+	include("../includes/conndb.php");
+	include("../includes/config.inc.php");
+
 	$IDCARD1=$_SESSION["IDCARD"];
 	$DEPART1=$_SESSION["DEPART"];
 	if($_SESSION['LA'] <> "1")
-	{   
+	{
 		echo "<meta charset='UTF-8'>";
 		echo "ต้องเข้าสู่ระบบก่อนครับ!";
 		echo"<meta http-equiv='refresh' content='2;URL=../index.php'>";
@@ -32,7 +32,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        ระบบความเสี่ยง 
+                        ระบบความเสี่ยง
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -65,9 +65,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php  
+                                        <?php
 											$total=0; $no=1;
-											$sql=" SELECT * FROM risk2_datarisk where (departreport = '$depart' or departreport = '$quality') order by daterigter DESC "; 
+											$sql=" SELECT * FROM risk2_datarisk where (departreport = '$depart' or departreport = '$quality') order by daterigter DESC ";
                         					$result = mysql_query($sql); while($data = mysql_fetch_array($result)) {
 											$dataevent=$data['dataevent'];
 											$name=$data['name'];
@@ -75,19 +75,19 @@
 										?>
                                             <tr>
                                             	<td><?=$no?></td>
-										<?php  	
-												$sqlperson2=" SELECT * FROM person where idcard = '$name'"; 
+										<?php
+												$sqlperson2=" SELECT * FROM person where idcard = '$name'";
 												$resultperson2 = mysql_query($sqlperson2); $dataperson2 = mysql_fetch_array($resultperson2);
 										?>
 												<td><?=$dataperson2['title']?><?=$dataperson2['name']?>  <?=$dataperson2['lastname']?>
 										<?php
-											$sqldataevent2=" SELECT * FROM risk2_risk  where coderisk = '$dataevent'"; 
+											$sqldataevent2=" SELECT * FROM risk2_risk  where coderisk = '$dataevent'";
 											$resultdataevent2 = mysql_query($sqldataevent2); $datadataevent2 = mysql_fetch_array($resultdataevent2)
 										?>
                                                 <td><?=$datadataevent2['namerisk']?></td>
                                                 <td><?=$data['notepatient']?></td>
-										<?php 
-											$sqldepartrespon2=" SELECT * FROM risk2_departreport where code = '$departrespon'"; 
+										<?php
+											$sqldepartrespon2=" SELECT * FROM risk2_departreport where code = '$departrespon'";
 											$resultdepartrespon2 = mysql_query($sqldepartrespon2); $datadepartrespon2 = mysql_fetch_array($resultdepartrespon2)
 										?>
                                                 <td><?=$datadepartrespon2['DeptName']?></td>
@@ -115,29 +115,29 @@
         <script src="../includes/bootstrap/js/plugins/input-mask/jquery.inputmask.js" type="text/javascript"></script>
         <script src="../includes/bootstrap/js/plugins/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
         <script src="../includes/bootstrap/js/plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
-        
+
         <!-- DATA TABES SCRIPT -->
         <script src="../includes/bootstrap/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
         <script src="../includes/bootstrap/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-        
+
         <!-- date-range-picker -->
         <script src="../includes/bootstrap/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
-        
+
 		<!-- bootstrap color picker -->
         <script src="../includes/bootstrap/js/plugins/colorpicker/bootstrap-colorpicker.min.js" type="text/javascript"></script>
-        
+
 		<!-- bootstrap time picker -->
         <script src="../includes/bootstrap/js/plugins/timepicker/bootstrap-timepicker.min.js" type="text/javascript"></script>
-       
+
 		<!-- AdminLTE App -->
         <script src="../includes/bootstrap/js/AdminLTE/app.js" type="text/javascript"></script>
-        
+
 		<!-- AdminLTE for demo purposes -->
         <script src="../includes/bootstrap/js/AdminLTE/demo.js" type="text/javascript"></script>
 
         <script src="../includes/bootstrap/js/jquery-ui.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="../includes/bootstrap/js/lang/th.js"></script>
-        
+
 		<!-- fullCalendar -->
         <script src="../includes/bootstrap/js/moment.min.js" type="text/javascript"></script>
         <script src="../includes/bootstrap/js/fullcalendar.min.js" type="text/javascript"></script>
@@ -203,7 +203,7 @@
                 });
             });
         </script>
-        
+
 		<!-- page script -->
         <script type="text/javascript">
             $(function() {

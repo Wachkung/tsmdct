@@ -1,3 +1,5 @@
+<?php 	include("./includes/config.inc.php");  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -116,19 +118,19 @@
 
 <!--End Container-->
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
- 
+
         <script src="includes/bootstrap/js/jquery.min.js"></script>
         <script src="includes/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- InputMask -->
         <script src="includes/bootstrap/js/plugins/input-mask/jquery.inputmask.js" type="text/javascript"></script>
         <script src="includes/bootstrap/js/plugins/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
         <script src="includes/bootstrap/js/plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
-        
+
         <!-- DATA TABES SCRIPT -->
         <script src="includes/bootstrap/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
         <script src="includes/bootstrap/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
-        
-        
+
+
         <!-- date-range-picker -->
         <script src="includes/bootstrap/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
         <!-- bootstrap color picker -->
