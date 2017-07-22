@@ -22,7 +22,7 @@
 <?php if(isset($_GET['fromevent']) && $_GET['fromevent']!=""){?>  
   <option value='0'>- เลือก ระดับความรุนแรงด้านคลินิก -</option>  
   <?php  
-  $q="select risk2_risk_level.code, risk2_risk_level.name from risk2_risk_level INNER JOIN risk2_group ON risk2_group.grouplevel = risk2_risk_level.grouplevel WHERE risk2_group.codegroup='".$_GET['fromevent']."' AND risk2_group.codegroup IN ('R100','R200','R300') ORDER BY code";  
+  $q="select risk2_risk_level.code, risk2_risk_level.name from risk2_risk_level INNER JOIN risk2_group ON risk2_group.grouplevel = risk2_risk_level.grouplevel WHERE risk2_group.codegroup='".$_GET['fromevent']."' AND risk2_group.grouplevel ='1' ORDER BY code";  
   $qr=mysql_query($q);  
   while($rs=mysql_fetch_array($qr)){  
   ?>  

@@ -93,7 +93,19 @@
                                            	<input name="grouptype" type="text" class="form-control" >
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
-                                    
+
+									  <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar-o"> สถานะด้านความเสี่ยง</i>
+                                            </div>
+                                           	<select class="form-control" id="grouplevel" name="grouplevel">
+											  <option value=" ">-เลือกด้านความเสี่ยง-</option>  
+											  <option value="1">ความเสี่ยงด้านคลินิก</option>  
+											  <option value="2">ความเสี่ยงด้านทั่วไป</option>  
+											</select> 
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->									
 									<div class="form-group">
 										<button name="btnSubmit" type="submit" class="btn btn-primary">บันทึกโปรแกรมความเสี่ยง</button> 
                                     	<button type="button" class="btn btn-success" onclick="window.location.href='index.php'" >กลับหน้าหลัก</button>

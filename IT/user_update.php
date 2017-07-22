@@ -48,7 +48,7 @@ $STATUS=$_POST['STATUS'];
  $DURABLE=$_POST['DURABLE'];
  if ($_POST['DURABLE'] == '') {$DURABLE='0';}
 
-					$strSQL = "update  user_datacenter set IDCARD='$IDCARD',DEPART='$DEPART',RISK='$RISK',REPORT='$REPORT',LA='$LA',ROOM='$ROOM',IT='$IT',PERSON='$PERSON',NUTRITION='$NUTRITION',PCT='$PCT',PTC='$PTC',IC='$IC',IM='$IM',ENV='$ENV',HRD='$HRD',ADMIN='$ADMIN',STATUS=$STATUS,DURABLE='$DURABLE' where id='$id'	";
+					$strSQL = "update  user_datacenter set IDCARD='$IDCARD',DEPART='$DEPART',RISK='$RISK',REPORT='$REPORT',LA='$LA',ROOM='$ROOM',IT='$IT',PERSON='$PERSON',NUTRITION='$NUTRITION',PCT='$PCT',PTC='$PTC',IC='$IC',IM='$IM',ENV='$ENV',HRD='$HRD',ADMIN='$ADMIN',STATUS='$STATUS',DURABLE='$DURABLE' where id='$id'	";
 					$objQuery = mysql_query($strSQL);
 					echo"<meta http-equiv='refresh' content='0;URL=user_edit.php?id=$id'>";
 					mysql_close();					

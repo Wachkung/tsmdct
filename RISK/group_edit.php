@@ -97,6 +97,20 @@ function CheckNum(){
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
 
+									  <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar-o"> สถานะด้านความเสี่ยง</i>
+                                            </div>
+                                           	<select class="form-control" id="grouplevel" name="grouplevel">
+											  <option value="<?=$objResult["grouplevel"];?>"><?php if($objResult["grouplevel"]<>'2') {echo "ความเสี่ยงด้านคลินิก";}else{echo "ความเสี่ยงด้านทั่วไป";} ?></option>  
+											  <option value="1">ความเสี่ยงด้านคลินิก</option>  
+											  <option value="2">ความเสี่ยงด้านทั่วไป</option>  
+											</select> 
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->									
+
+
 									<div class="form-group">
 									    <input name="id" type="hidden" class="form-control"  value="<?=$id?>">
 										<button name="btnSubmit" type="submit" class="btn btn-primary">บันทึกโปรแกรมความเสี่ยง</button> 
