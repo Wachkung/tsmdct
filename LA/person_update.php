@@ -18,6 +18,9 @@ $idcard=$_POST['idcard'];
 $title=$_POST['title'];
 $name=$_POST['name'];
 $lastname=$_POST['lastname'];
+$title_en=$_POST['title_en'];
+$fname_en=$_POST['fname_en'];
+$lname_en=$_POST['lname_en'];
 $sex=$_POST['sex'];
 $position=$_POST['position'];
 $bdate=$_POST['bdate'];
@@ -36,7 +39,7 @@ $dsum=$_POST['dsum'];
 $detail=$_POST['detail'];
 $dupdate=date("Y-m-d H:i:s");
 //up la
-$strSQL = "update  person  set idcard='$idcard',title='$title',name='$name',lastname='$lastname',sex='$sex',position='$position',bdate='$bdate',workdate='$workdate',depart='$depart',typetext='$typetext',addr='$addr',tell='$tell',email='$email' where idcard='$idcard'";
+$strSQL = "update  person  set idcard='$idcard',title='$title',name='$name',lastname='$lastname',title_en='$title_en',fname_en='$fname_en',lname_en='$lname_en',sex='$sex',position='$position',bdate='$bdate',workdate='$workdate',depart='$depart',typetext='$typetext',addr='$addr',tell='$tell',email='$email' where idcard='$idcard'";
 $objQuery = mysql_query($strSQL);
 echo"<meta http-equiv='refresh' content='0;URL=person_edit.php?idcard=$idcard'>";
 mysql_close();

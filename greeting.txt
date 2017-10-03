@@ -1,6 +1,6 @@
 git init
-git add README.md
-git commit -m "first commit"
+git add . //เพิ่มรายงานอัพเดท ที่แก้ไข
+git commit -m "first commit"  // เพิ่ม Commit ใหม่
 git remote add origin https://github.com/Wachkung/tsmdct.git
 git push -u origin master
 

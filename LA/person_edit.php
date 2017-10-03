@@ -53,7 +53,7 @@
                 <section class="content"> 
                  	<div class="row"> 
                 	<form method="post" enctype="multipart/form-data"   action="person_update.php" name="frmMain" onSubmit="JavaScript:return fncSubmit();" >            
-                       <section class="col-lg-5 connectedSortable">    
+                       <section class="col-lg-12 connectedSortable">    
                             <div class="box box-solid box-primary">
                                 <div class="box-header">
                                     <h3 class="box-title">บันทึกเจ้าหน้าที่ </h3>
@@ -67,8 +67,8 @@
                                             <input type="text" class="form-control" name="idcard" value="<?=$objResult["idcard"];?> " readonly  />
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
-                                	 
-                                     <div class="form-group">
+                                	                                     
+                                    <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 คำนำหน้าชื้อ :
@@ -81,11 +81,6 @@
                                               <option value="ว่าที่ ร้อยตรี">ว่าที่ ร้อยตรี</option>
                                               <option value="ว่าที่ ร้อยตรี หญิ่ง">ว่าที่ ร้อยตรี หญิง</option>
                                             </select>
-										</div><!-- /.input group -->
-                                    </div><!-- /.form group -->
-                                    
-                                    <div class="form-group">
-                                        <div class="input-group">
                                             <div class="input-group-addon">
                                                 ชื่อ :
                                             </div>
@@ -96,6 +91,26 @@
                                           	 </div>
                                            	 <input type="text" class="form-control" name="lastname"
                                               value="<?=$objResult["lastname"];?>" />  
+                                        </div><!-- /.input group -->
+                                    </div><!-- /.form group -->
+
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                คำนำหน้า(EN) :
+                                            </div>
+                                            <input type="text" class="form-control"  name="title_en"  
+                                            value="<?=$objResult["title_en"];?>"  />
+                                            <div class="input-group-addon">
+                                                ชื่อ(EN) :
+                                            </div>
+                                            <input type="text" class="form-control"  name="fname_en"  
+                                            value="<?=$objResult["fname_en"];?>"  />
+                                             <div class="input-group-addon">
+                                                 สกุล(EN) :
+                                          	 </div>
+                                           	 <input type="text" class="form-control" name="lname_en"
+                                              value="<?=$objResult["lname_en"];?>" />  
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
                                     
@@ -229,7 +244,7 @@
                                 </div><!-- /.box-body -->
                         </section><!-- /.Left col -->
                         
-                        <section class="col-lg-6 connectedSortable">  
+                        <section class="col-lg-12 connectedSortable">  
                             <div class="box">
                                 <div class="box-header">
                                     <h3 class="box-title">รายชื้อเจ้าหน้าที่</h3>

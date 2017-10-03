@@ -2,8 +2,8 @@
 	session_start();
 	include("../includes/conndb.php"); 
 	include("../includes/config.inc.php"); 
-	$strdate = "2014-10-1";
-	$enddate = "2015-09-30";
+    $strdate = "2016-10-1";
+    $enddate = "2017-09-30";
 	
 	$IDCARD1=$_SESSION["IDCARD"];
 	$DEPART1=$_SESSION["DEPART"];
@@ -32,11 +32,12 @@
                         ระบบความเสี่ยง 
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="report_ef.php"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li><a href="report_ef57.php">2557</a></li>
-                        <li><a href="report_ef58.php">2558</a></li>
-                        <li><a href="report_ef59.php">2559</a></li>
-                        <li><a href="report_ef60.php">2560</a></li>
+                        <li><a href="report_ghi.php"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="report_ghi57.php">2557</a></li>
+                        <li><a href="report_ghi58.php">2558</a></li>
+                        <li><a href="report_ghi59.php">2559</a></li>
+                        <li><a href="report_ghi59.php">2560</a></li>
+                        <li><a href="report_ghi60.php">2560</a></li>
                         <li class="active">Data tables</li>
                     </ol>
                 </section>
@@ -47,7 +48,7 @@
                         <div class="col-xs-12">
                             <div class="box">
                                 <div class="box-header">
-                                    <h3 class="box-title">รายงานความเสี่ยงระดับ E - F </h3>
+                                    <h3 class="box-title">รายงานความเสี่ยงระดับ G - I </h3>
                                 </div><!-- /.box-header -->
                                 <div class="box-body table-responsive">
                                     <table id="example1" class="table table-bordered table-hover">
@@ -68,7 +69,7 @@
                                         <tbody>
                                         <?php
 											$total=0; $no=1;
-											$sql=" SELECT * FROM risk2_datarisk WHERE (risk2_datarisk.commen IN ('E','F') OR risk2_datarisk.typereport IN ('E','F')) AND (daterigter BETWEEN '".$strdate."'and '".$enddate."')  order by daterigter DESC "; 
+											$sql=" SELECT * FROM risk2_datarisk WHERE (risk2_datarisk.commen IN ('G','H','I') OR risk2_datarisk.typereport IN ('G','H','I')) AND (daterigter BETWEEN '".$strdate."'and '".$enddate."')   order by daterigter DESC "; 
                         					$result = mysql_query($sql); while($data = mysql_fetch_array($result)) {
 											$dataevent=$data['dataevent'];
 											$name=$data['name'];
@@ -76,7 +77,7 @@
 										?>
                                             <tr>
                                             	<td><?=$no?></td>
-										<?php	
+										<?php
 												$sqlperson2=" SELECT * FROM person where idcard = '$name'"; 
 												$resultperson2 = mysql_query($sqlperson2); $dataperson2 = mysql_fetch_array($resultperson2);
 										?>
@@ -96,6 +97,7 @@
                                                 <td><?=LongThaiDate($data['daterigter'])?></td>
                                                <td><a href="risk_detail.php?id=<?=$data['id']?>" title="<?=$data['dataevent']?>"><span class="label label-primary"><i class="fa fa-edit"></i></span></a></td>
                                                <td><a href="risk_delete.php?id=<?=$data['id']?>" title="<?=$data['notepatient']?>"onclick="return confirm('ลบข้อมูลหรือไม่');"><span class="label label-primary"> <i class="fa fa-trash-o"></i></span></a></td>
+                                                <td ><?if ($data['noteceo'] == "") {echo "  ";}else{echo "<center><span class='label label-primary'><i class='fa fa-check' aria-hidden='true'></i></span></center>";} ?></td>
                                             </tr>
                                         <?php $no++; } ?>
                                         </tbody>

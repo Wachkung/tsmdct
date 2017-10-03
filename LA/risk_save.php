@@ -105,7 +105,7 @@ curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=".$message_send);
 // follow redirects
 curl_setopt( $chOne, CURLOPT_FOLLOWLOCATION, 1);
 //ADD header array
-$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer CPen9iokBZGLNEjICuCUz3NbSiOcuaTbdZlOztHMgqh', ); 
+$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer CivtjjaHTXPKvbnFjenNpegWbbATxrwzHbusIYlUrdR', ); 
 //$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: zvzyyQ8Ak3OE6u2CFOpp6BGk9HxlWQpckzvA4UYzPdH', );  //ทีมบริหารจัดการความเสี่ยง โรงพยาบาลตาลสุม
 //$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: CPen9iokBZGLNEjICuCUz3NbSiOcuaTbdZlOztHMgqh', );  //1-1
 //$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: HwD6a2HvWWdmKQdEZwGTs1i1sY2EZbXkeZxpxLkxLwK', );  //ทีมบริหารจัดการความเสี่ยง โรงพยาบาลสิรินธร

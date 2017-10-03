@@ -103,9 +103,10 @@
                             </a>
                             <ul class="active">
 								<li><a href="http://203.113.117.68/hionline/" target="_blank"><span>ระบบประวัติผู้ป่วยย้อนหลัง</span></a></li>
+								<li><a href="http://203.113.117.68/hirep/" target="_blank"><span>ระบบรายงานผู้มารับบริการ</span></a></li>
 								<li><a href="http://203.113.117.68/ncdonline/#ajax/page_login.php" target="_blank"><span>ระบบทะเบียนผู้ป่วย NCD</span></a></li>
 								<li><a href="http://192.168.11.9/checkpop/" target="_blank"><span>ระบบตรวจสอบเลขบัตร</span></a></li>
-								<li><a href="https://login.mail.go.th/Li/?_task=mail&_redirecthost=tshpt.mail.go.th" target="_blank"><span>ระบบ E - Mail โรงพยาบาล</span></a></li>
+								<li><a href="https://accounts.mail.go.th/" target="_blank"><span>ระบบ E - Mail โรงพยาบาล</span></a></li>
 								<li><a href="http://www.sunpasit.go.th:8081/ssj_Attachment/index_main.jsp" target="_blank"><span>แบบประเมินความผูกพันฯ</span></a></li>
 								<li><a href="http://e-registration.dopa.go.th/Nbirth_cer/" target="_blank"><span>ระบบหนังสือรับรองการเกิด</span></a></li>
 								<li><a href="http://healthdata.moph.go.th/Deathreport2005/GUI2007/loginform.php" target="_blank"><span>ระบบรายงานข้อมูลการตาย</span></a></li>

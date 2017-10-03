@@ -2,8 +2,8 @@
 	session_start();
 	include("../includes/conndb.php"); 
 	include("../includes/config.inc.php"); 
-	$strdate = "2014-10-1";
-	$enddate = "2015-09-30";
+    $strdate = "2016-10-1";
+    $enddate = "2017-09-30";
 	
 	$IDCARD1=$_SESSION["IDCARD"];
 	$DEPART1=$_SESSION["DEPART"];
@@ -76,7 +76,7 @@
 										?>
                                             <tr>
                                             	<td><?=$no?></td>
-										<?php	
+										<?php
 												$sqlperson2=" SELECT * FROM person where idcard = '$name'"; 
 												$resultperson2 = mysql_query($sqlperson2); $dataperson2 = mysql_fetch_array($resultperson2);
 										?>
@@ -96,6 +96,7 @@
                                                 <td><?=LongThaiDate($data['daterigter'])?></td>
                                                <td><a href="risk_detail.php?id=<?=$data['id']?>" title="<?=$data['dataevent']?>"><span class="label label-primary"><i class="fa fa-edit"></i></span></a></td>
                                                <td><a href="risk_delete.php?id=<?=$data['id']?>" title="<?=$data['notepatient']?>"onclick="return confirm('ลบข้อมูลหรือไม่');"><span class="label label-primary"> <i class="fa fa-trash-o"></i></span></a></td>
+                                                <td ><?if ($data['noteceo'] == "") {echo "  ";}else{echo "<center><span class='label label-primary'><i class='fa fa-check' aria-hidden='true'></i></span></center>";} ?></td>
                                             </tr>
                                         <?php $no++; } ?>
                                         </tbody>

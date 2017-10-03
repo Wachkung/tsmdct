@@ -5,8 +5,8 @@ $Address = "99 หมู่ 2 ตำบลตาลสุม อำเภอต�
 $Phone = "045 - 427137";
 $Email = "tansumhosp@tshpt.mail.go.th";
 $message =" `<a href='https://www.facebook.com/TalSumHosPiTal?ref=hl'> TalSumHosPiTal </a> << หรือ >> Line : <a href='http://line.me/ti/p/%40gjh5866y'><img height='36' border='0' alt='เพิ่มเพื่อน' src='http://biz.line.naver.jp/line_business/img/btn/addfriends_en.png'></a></p><br>`";
-$strdate = "2016-10-01";
-$enddate = "2017-09-30";
+$strdate = "2017-10-01";
+$enddate = "2018-09-30";
 $YYYY = date("Y")+543;
 $todays = date("Y-m-d");
 $dtimenow = date("Y-m-d H:i:s");

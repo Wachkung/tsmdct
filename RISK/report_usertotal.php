@@ -69,18 +69,18 @@
 											$total=0; $no=1;
 											$sql=" SELECT
 														risk2_datarisk.`name`,
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-01-01' AND '2017-01-31' THEN '01' END) AS 'มกราคม',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-02-01' AND '2017-02-29' THEN '02' END) AS 'กุมภาพันธ์',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-03-01' AND '2017-03-30' THEN '03' END) AS 'มีนาคม',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-04-01' AND '2017-04-30' THEN '04' END) AS 'เมษายน',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-05-01' AND '2017-05-31' THEN '05' END) AS 'พฤษภาคม',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-06-01' AND '2017-06-30' THEN '06' END) AS 'มิถุนายน',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-07-01' AND '2017-07-31' THEN '07' END) AS 'กรกฏาคม',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-08-01' AND '2017-08-31' THEN '08' END) AS 'สิงหาคม',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-09-01' AND '2017-09-31' THEN '09' END) AS 'กันยายน',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2016-10-01' AND '2016-10-31' THEN '10' END) AS 'ตุลาคม',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2016-11-01' AND '2016-11-31' THEN '11' END) AS 'พศจิกายน',
-														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2016-12-01' AND '2016-12-31' THEN '12' END) AS 'ธันวาคม'
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-01-01' AND '2018-01-31' THEN '01' END) AS 'มกราคม',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-02-01' AND '2018-02-29' THEN '02' END) AS 'กุมภาพันธ์',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-03-01' AND '2018-03-30' THEN '03' END) AS 'มีนาคม',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-04-01' AND '2018-04-30' THEN '04' END) AS 'เมษายน',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-05-01' AND '2018-05-31' THEN '05' END) AS 'พฤษภาคม',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-06-01' AND '2018-06-30' THEN '06' END) AS 'มิถุนายน',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-07-01' AND '2018-07-31' THEN '07' END) AS 'กรกฏาคม',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-08-01' AND '2018-08-31' THEN '08' END) AS 'สิงหาคม',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2018-09-01' AND '2018-09-31' THEN '09' END) AS 'กันยายน',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-10-01' AND '2017-10-31' THEN '10' END) AS 'ตุลาคม',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-11-01' AND '2017-11-31' THEN '11' END) AS 'พศจิกายน',
+														COUNT(CASE WHEN risk2_datarisk.datereport BETWEEN '2017-12-01' AND '2017-12-31' THEN '12' END) AS 'ธันวาคม'
 														FROM
 														risk2_datarisk
 														WHERE risk2_datarisk.datereport BETWEEN '".$strdate."'and '".$enddate."'
