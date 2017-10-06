@@ -82,7 +82,7 @@
                                 <i class="glyphicon glyphicon-home"></i> <span>หน้าแรก</span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <!-- <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-user-md" aria-hidden="true"></i><span>ระบบบุคคลากร</span><i class="fa fa-angle-left pull-right"></i>
                             </a>
@@ -90,7 +90,7 @@
 								<li class="active"><a href="la_add.php"><i class="fa fa-edit"></i> <span>บันทึกวันลา</span></a></li>
 								<li class="active"><a href="car_add.php"><i class="fa fa-edit"></i> <span>บันทึกข้อมูลรถ</span></a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-hospital-o" aria-hidden="true"></i><span>ระบบจัดการความเสี่ยง</span>

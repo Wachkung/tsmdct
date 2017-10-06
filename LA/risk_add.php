@@ -12,6 +12,7 @@
 		echo"<meta http-equiv='refresh' content='2;URL=../index.php'>";
 		exit();
 	}
+
 ?>
 
 <!DOCTYPE html>
@@ -62,10 +63,21 @@
                                             <div class="input-group-addon">
                                                 ผู้รายงานความเสี่ยง :</i>
                                             </div>
-											  <select name="name" class="form-control" >
-                                              <option value="">--- เลือกผู้รายงานความเสี่ยง------</option>
+											  <select name="name" class="form-control" >                                    
                                               <?php 
-												  $sqlperson=" SELECT * FROM	 person where personla != '' order by name ASC "; 
+												  $sqlperson2=" SELECT * FROM person where idcard = $IDCARD1"; 
+												//   echo $sqlperson2;exit;
+												  $resultperson2 = mysql_query($sqlperson2); while($dataperson2 = mysql_fetch_array($resultperson2)) {
+											  ?>
+
+                                              <option value="<?=$dataperson2['idcard']?>"> <?=$dataperson2['idcard']?> || <?=$dataperson2['name']?>  
+											  <?=$dataperson2['lastname']?> </option>
+											  
+											  <?php } ?>
+
+
+                                              <?php 
+												  $sqlperson=" SELECT * FROM person where personla != '' order by name ASC "; 
 												  $resultperson = mysql_query($sqlperson); while($dataperson = mysql_fetch_array($resultperson)) {
 											  ?>
                                               <option value="<?=$dataperson['idcard']?>"> <?=$dataperson['idcard']?> || <?=$dataperson['name']?>  
@@ -99,7 +111,21 @@
                                                 หน่วยงานที่รายงาน :</i>
                                             </div>
 											 <select class="form-control"  name="departreport">
-												<option value="">- เลือก หน่วยงานที่รายงาน -</option>
+												<?php
+														$sql2="select CODE, DeptName from risk2_departreport where CODE = '$DEPART1'";
+														$dbquery2 = mysql_db_query($db, $sql2);
+														$num_rows2 = mysql_num_rows($dbquery2);
+														$o=0;
+														while ($o < $num_rows2)
+															{
+																$result2 = mysql_fetch_array($dbquery2);
+																$codedepartreport2 = $result2[0];
+																$namedepartreport2 = $result2[1];
+																echo"<option value='$codedepartreport2'>$namedepartreport2</option>";
+																$o++;
+															}
+												?>
+												
 												<?php
 														$sql="select CODE, DeptName from risk2_departreport order by STATUS,DeptName ";
 														$dbquery = mysql_db_query($db, $sql);

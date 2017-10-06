@@ -56,8 +56,9 @@
                                             <select name="IDCARD" class="form-control" >
                                               <option value="">--- เลือกชื่อเจ้าหน้าที่------</option>
                                               <?php
-													$sqlperson=" SELECT * FROM	 person  order by name ASC "; 
+													$sqlperson=" SELECT * FROM	 person WHERE person.idcard not in (SELECT user_datacenter.IDCARD FROM user_datacenter ) order by name ASC "; 
 													$resultperson = mysql_query($sqlperson); while($dataperson = mysql_fetch_array($resultperson)) {
+                                                    $CODE=$dataperson['depart']
 											  ?>
                                               <option value="<?=$dataperson['idcard']?>"><?=$dataperson['idcard']?> || <?=$dataperson['name']?>  
 											  <?=$dataperson['lastname']?> </option>
@@ -66,23 +67,6 @@
                                         </div><!-- /.input group -->
                                     </div><!-- /.form group -->
                                     
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                หน่วยงาน :
-                                            </div>
-                                            <select name="depart" class="form-control" >
-                                              <option value="">--- เลือกหน่วยงาน------</option>
-                                              <?php
-													$sqlperson=" SELECT * FROM	 rm_depart  order by CODE ASC "; 
-													$resultperson = mysql_query($sqlperson); while($dataperson = mysql_fetch_array($resultperson)) {
-											  ?>
-                                              <option value="<?=$dataperson['CODE']?>">รหัสหน่วยงาน <?=$dataperson['CODE']?> | <?=$dataperson['depart']?> </option>  
-											  <?php  } ?>
-                                            </select> 
-                                        </div><!-- /.input group -->
-                                    </div><!-- /.form group -->
-
 									<div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-addon">
@@ -142,6 +126,7 @@
                                 
                                 <div class="box-footer">
                                 	<div class="form-group">
+									<input name="CODE" type="hidden" class="form-control"  value="<?=$CODE?>">
                                    	<button  type="submit" class="btn btn-success"><i class="fa fa-save"></i> บันทึกการให้บริการงาน IT</button>
                                     <button type="button" class="btn btn-danger" onclick="window.location.href='report_user.php'"><i class="fa fa-reply-all"></i>ย้อนกลับ</button>	
                                  </div><!-- /.form group -->

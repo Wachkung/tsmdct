@@ -2,7 +2,7 @@
 	session_start();
 	include("includes/conndb.php");
 	include("./includes/config.inc.php");
-	real_esc($_POST);
+	// real_esc($_POST);
 
 	$_SESSION["YYYY"] =$YYYY;
 

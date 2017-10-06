@@ -5,7 +5,7 @@ session_start();
 	
 	$DEPART1=$_SESSION["DEPART"];
 	$IDCARD1=$_SESSION["IDCARD"];
-	//echo $IDCARD1 ; exit;
+	// echo $IDCARD1 ; exit;
 	if($IDCARD1 == " ")
 	{   
 		echo $IDCARD1 ; exit;

@@ -6,7 +6,7 @@ set_time_limit(0);
 
 function connectToDB() {
     
-    $hostdb = '192.168.11.10';
+    $hostdb = 'localhost';
     $userdb = 'hiuser';
     $passdb = '212224236';
     $namedb = 'hi';

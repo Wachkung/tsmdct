@@ -13,7 +13,8 @@
 	}
 //รับค่ามาจากฟอร์ม
 $IDCARD=$_POST['IDCARD'];
-$DEPART=$_POST['DEPART'];
+$DEPART=$_POST['CODE'];
+// echo $DEPART; exit;
 $RISK=$_POST['RISK'];
  if ($_POST['RISK'] == '') {$RISK='0';}
 $REPORT=$_POST['REPORT'];
@@ -46,7 +47,8 @@ $STATUS=$_POST['STATUS'];
  if ($_POST['STATUS'] == '') {$STATUS='1';}
 $DURABLE=$_POST['DURABLE'];
  if ($_POST['DURABLE'] == '') {$DURABLE='0';}
-					$strSQL = "insert into  user_datacenter set IDCARD='$IDCARD',DEPART='$DEPART',PASSWORD=',PASSWORD='f122db007ed655921f98184e4302bba84990ff68'',RISK='$RISK',REPORT='$REPORT',LA='$LA',ROOM='$ROOM',IT='$IT',PERSON='$PERSON',NUTRITION='$NUTRITION',PCT='$PCT',PTC='$PTC',IC='$IC',IM='$IM',ENV='$ENV',HRD='$HRD',ADMIN='$ADMIN',STATUS='$STATUS',DURABLE='$DURABLE' where IDCARD='$IDCARD'"	;
+					$strSQL = "insert into  user_datacenter set IDCARD='$IDCARD',DEPART='$DEPART',PASSWORD='f122db007ed655921f98184e4302bba84990ff68',RISK='$RISK',REPORT='$REPORT',LA='$LA',ROOM='$ROOM',IT='$IT',PERSON='$PERSON',NUTRITION='$NUTRITION',PCT='$PCT',PTC='$PTC',IC='$IC',IM='$IM',ENV='$ENV',HRD='$HRD',ADMIN='$ADMIN',STATUS='$STATUS',DURABLE='$DURABLE'"	;
+					// echo $strSQL;exit;
 					$objQuery = mysql_query($strSQL);
 					echo"<meta http-equiv='refresh' content='0;URL=user_add.php'>";
 					mysql_close();					
