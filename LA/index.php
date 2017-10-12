@@ -63,8 +63,9 @@
                                                  <th width="5%">No.</th>
                                                 <th width="15%">ผู้ประสบเหตุ</th>
                                                 <th width="15%">เหตุการณ์</th>
-                                                <th width="35%">วิเคราะห์และการอธิบาย</th>
-                                                <th width="15%">หน่วยงานที่ส่งมา</th>
+                                                <th width="25%">วิเคราะห์และการอธิบาย</th>
+                                                <th width="15%">ส่งรายงาน</th>
+                                                <th width="15%">รับรายงาน</th>
                                                 <th width="15%">ประสบปัญหา</th>
                                                 <th width="5%"><i class="fa fa-edit"></i></th>
                                             </tr>
@@ -78,7 +79,8 @@
 											$dataevent=$data['dataevent'];
 											$name=$data['name'];
 											$departreport=$data['departreport'];
-										?>
+                                            $departrespon=$data['departrespon'];
+                                            ?>
                                             <tr>
                                             	<td><?=$no?></td>
 										<?php  	
@@ -97,6 +99,11 @@
 											$resultdepartreport2 = mysql_query($sqldepartreport2); $datadepartreport2 = mysql_fetch_array($resultdepartreport2)
 										?>
                                                 <td><?=$datadepartreport2['DeptName']?></td>
+                                        <?php 
+											$sqldepartrespon2=" SELECT * FROM risk2_departreport where code = '$departrespon'"; 
+											$resultdepartrespon2 = mysql_query($sqldepartrespon2); $datadepartrespon2 = mysql_fetch_array($resultdepartrespon2)
+										?>
+                                                <td><?=$datadepartrespon2['DeptName']?></td>
                                                 <td><?=LongThaiDate($data['daterigter'])?></td>
                                                <td><a href="risk_edit.php?id=<?=$data['id']?>" title="<?=$data['dataevent']?>"><span class="label label-primary"><i class="fa fa-edit"></i></span></a></td>
                                             </tr>
