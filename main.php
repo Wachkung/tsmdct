@@ -8,8 +8,6 @@ session_start();
 	// echo $IDCARD1 ; exit;
 	if($IDCARD1 == " ")
 	{   
-		echo $IDCARD1 ; exit;
-
 		echo "<meta charset='UTF-8'>";
 		echo "ต้องเข้าสู่ระบบก่อนครับ!";
 		echo"<meta http-equiv='refresh' content='2;URL=../index.php'>";

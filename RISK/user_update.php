@@ -29,7 +29,8 @@ $ENV=$_POST['ENV'];
  if ($_POST['ENV'] == '') {$ENV='0';}
 $HRD=$_POST['HRD'];
  if ($_POST['HRD'] == '') {$HRD='0';}
-					$strSQL = "update user_datacenter set RISK='$RISK',PCT='$PCT',PTC='$PTC',IC='$IC',IM='$IM',ENV='$ENV',HRD='$HRD' where IDCARD='$IDCARD'	";
+					$strSQL = "update user_datacenter set DEPART='$DEPART', RISK='$RISK',PCT='$PCT',PTC='$PTC',IC='$IC',IM='$IM',ENV='$ENV',HRD='$HRD' where id='$id'	";
+					// echo $strSQL;exit;
 					$objQuery = mysql_query($strSQL);
 					echo"<meta http-equiv='refresh' content='0;URL=user_edit.php?id=$id'>";
 					mysql_close();					

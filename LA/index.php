@@ -17,10 +17,11 @@
 	$objQuery = mysql_query($strSQL);
 	$objResult = mysql_fetch_array($objQuery);
 
-	$strSQLuser = "SELECT risk2_departreport.DeptName,risk2_departreport.CODE,person.quality FROM person INNER JOIN risk2_departreport on risk2_departreport.`CODE` = person.depart  WHERE idcard = '$IDCARD1' ";
+	$strSQLuser = "SELECT risk2_departreport.DeptName,risk2_departreport.CODE,risk2_departreport.CODE_GROUP,person.quality FROM person INNER JOIN risk2_departreport on risk2_departreport.`CODE` = person.depart  WHERE idcard = '$IDCARD1' ";
 	$objQueryuser = mysql_query($strSQLuser);
 	$objResultuser = mysql_fetch_array($objQueryuser);
 	$depart=$objResultuser["CODE"];
+    $codegroup=$objResultuser["CODE_GROUP"];
 	$quality=$objResultuser["quality"];
 ?>
 
@@ -71,7 +72,8 @@
                                         <tbody>
                                         <?php  
 											$total=0; $no=1;
-											$sql=" SELECT * FROM risk2_datarisk where (departrespon = '$depart' or departrespon = '$quality') and noteceo=' ' order by daterigter DESC "; 
+											$sql=" SELECT * FROM risk2_datarisk where (departrespon = '$depart' or departrespon = '$quality'or risk2_datarisk.departrespon in (SELECT risk2_departreport.`CODE` FROM risk2_departreport 
+                                            WHERE risk2_departreport.CODE_GROUP='$depart') ) and noteceo=' ' order by daterigter DESC "; 
                         					$result = mysql_query($sql); while($data = mysql_fetch_array($result)) {
 											$dataevent=$data['dataevent'];
 											$name=$data['name'];

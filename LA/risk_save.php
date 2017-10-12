@@ -106,9 +106,10 @@ curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=".$message_send);
 curl_setopt( $chOne, CURLOPT_FOLLOWLOCATION, 1);
 //ADD header array
 $headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer CPen9iokBZGLNEjICuCUz3NbSiOcuaTbdZlOztHMgqh', ); 
-//$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: CivtjjaHTXPKvbnFjenNpegWbbATxrwzHbusIYlUrdR', );  //ทีมบริหารจัดการความเสี่ยง โรงพยาบาลตาลสุม
+//$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: CivtjjaHTXPKvbnFjenNpegWbbATxrwzHbusIYlUrdR', );  //ทีม Manager ความเสี่ยง โรงพยาบาลตาลสุม
 //$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: CPen9iokBZGLNEjICuCUz3NbSiOcuaTbdZlOztHMgqh', );  //1-1
 //$headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: HwD6a2HvWWdmKQdEZwGTs1i1sY2EZbXkeZxpxLkxLwK', );  //ทีมบริหารจัดการความเสี่ยง โรงพยาบาลสิรินธร
+// $headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer 9aoL5didTdfhW7FxtBcXAyvFV2zxUsJ37MORQtVJPbh', ); 
 curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers);
 //RETURN
 curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1);
