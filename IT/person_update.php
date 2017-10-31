@@ -37,8 +37,12 @@ $dsum=$_POST['dsum'];
 $detail=$_POST['detail'];
 $dupdate=date("Y-m-d H:i:s");
 //up la
-$strSQL = "update  person  set idcard='$idcard',title='$title',name='$name',lastname='$lastname',sex='$sex',position='$position',bdate='$bdate',workdate='$workdate',depart='$depart',typetext='$typetext',lasasom='$lasasom',addr='$addr',personla='$personla',tell='$tell',email='$email' where idcard='$idcard'";
+$strSQL = "update person set idcard='$idcard',title='$title',name='$name',lastname='$lastname',sex='$sex',position='$position',bdate='$bdate',workdate='$workdate',depart='$depart',typetext='$typetext',lasasom='$lasasom',addr='$addr',personla='$personla',tell='$tell',email='$email' where idcard='$idcard'";
 $objQuery = mysql_query($strSQL);
+
+$strSQLUser = "update user_datacenter set IDCARD='$idcard',DEPART='$depart' where IDCARD='$idcard'";
+$objQueryUser = mysql_query($strSQLUser);
+
 echo"<meta http-equiv='refresh' content='0;URL=person_edit.php?idcard=$idcard'>";
 mysql_close();
 ?>

@@ -80,7 +80,17 @@
                                                 ชื่อผู้ขอใช้ห้องประชุม:
                                             </div>
                                             <select name="idcard" class="form-control" >
-                                              <option value="">--- เลือกชื่อเจ้าหน้าที่------</option>
+                                              <!-- <option value="">-  เลือกชื่อเจ้าหน้าที่  -</option> -->                                    
+                                              <?php 
+												  $sqlperson2=" SELECT * FROM person where idcard = $IDCARD1"; 
+												//   echo $sqlperson2;exit;
+												  $resultperson2 = mysql_query($sqlperson2); while($dataperson2 = mysql_fetch_array($resultperson2)) {
+											  ?>
+
+                                              <option value="<?=$dataperson2['idcard']?>"> <?=$dataperson2['idcard']?> || <?=$dataperson2['name']?>  
+											  <?=$dataperson2['lastname']?> </option>
+											  
+											  <?php } ?>
 
                                               <?php
 													if($_SESSION['ADMIN'] <> "1") {   
@@ -109,8 +119,15 @@
                                                 หน่วยงาน :
                                             </div>
                                             <select name="depart" class="form-control" >
-                                              <option value="">--- เลือกหน่วยงาน------</option>
-                                              <?php   $sqldepart=" SELECT * FROM	 rm_depart  order by CODE ASC "; 
+                                              <!-- <option value="">-  เลือกหน่วยงาน  -</option> -->
+                                              <?php   $sqldepart2=" SELECT * FROM rm_depart where CODE = '$DEPART1'"; 
+												 $resultdepart2 = mysql_query($sqldepart2); while($datadepart2 = mysql_fetch_array($resultdepart2)) {
+											  ?>
+                                              <option value="<?=$datadepart2['CODE']?>">รหัสหน่วยงาน <?=$datadepart2['CODE']?> | <?=$datadepart2['depart']?> </option>  
+											  <?php  } ?>
+
+
+                                              <?php   $sqldepart=" SELECT * FROM rm_depart  order by CODE ASC "; 
 												 $resultdepart = mysql_query($sqldepart); while($datadepart = mysql_fetch_array($resultdepart)) {
 											  ?>
                                               <option value="<?=$datadepart['CODE']?>">รหัสหน่วยงาน <?=$datadepart['CODE']?> | <?=$datadepart['depart']?> </option>  
